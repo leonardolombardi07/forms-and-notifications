@@ -14,8 +14,6 @@ const UnformInput = ({ name, iconName, style, ...rest }, ref) => {
   const { fieldName, registerField, defaultValue = "", error } = useField(name);
   const inputRef = useRef({ value: defaultValue });
 
-  console.log(error);
-
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
 

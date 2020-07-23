@@ -2,6 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
+import HomeScreen from "../screens/HomeScreen";
 import FormikScreen from "../screens/FormikScreen";
 import MyInputScreen from "../screens/MyInputScreen";
 import UnformScreen from "../screens/UnformScreen";
@@ -13,6 +14,7 @@ const Router = () => {
   return (
     <NavigationContainer>
       <MainStack.Navigator>
+        <MainStack.Screen name="HomeScreen" component={HomeScreen} />
         <MainStack.Screen
           name="PushNotificationsScreen"
           component={PushNotificationsScreen}

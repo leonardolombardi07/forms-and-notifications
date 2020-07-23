@@ -38,7 +38,7 @@ const PushNotificationsScreen = ({ navigation }) => {
     <SafeAreaView style={styles.screenContainer}>
       <Text>PushNotificationsScreen</Text>
       <Button
-        title="Handle Push Notification"
+        title="Enviar push notification"
         onPress={handlePushNotificationsSend}
       />
     </SafeAreaView>
