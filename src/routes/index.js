@@ -12,13 +12,13 @@ const Router = () => {
   return (
     <NavigationContainer>
       <MainStack.Navigator>
-        <MainStack.Screen name="FormikScreen" component={FormikScreen} />
-        <MainStack.Screen name="MyInputScreen" component={MyInputScreen} />
-        <MainStack.Screen name="UnformScreen" component={UnformScreen} />
         <MainStack.Screen
           name="PushNotificationsScreen"
           component={PushNotificationScreen}
         />
+        <MainStack.Screen name="FormikScreen" component={FormikScreen} />
+        <MainStack.Screen name="MyInputScreen" component={MyInputScreen} />
+        <MainStack.Screen name="UnformScreen" component={UnformScreen} />
       </MainStack.Navigator>
     </NavigationContainer>
   );
