@@ -15,19 +15,6 @@ Notifications.setNotificationHandler({
 });
 
 const LocalNotificationsScreen = ({ navigation }) => {
-  const triggerNotificationHandler = async () => {
-    await Notifications.scheduleNotificationAsync({
-      content: {
-        title: "Primeira Notificação Local",
-        body: "Essa é a primeira notificação local que eu mando (:",
-        color: "red",
-      },
-      trigger: {
-        seconds: 5,
-      },
-    });
-  };
-
   useEffect(() => {
     // getPermissions verifica se um usuário tem permissão pra receber notificações
     // se não tiver, uma solicitação para ter permissão é mandada
@@ -76,6 +63,19 @@ const LocalNotificationsScreen = ({ navigation }) => {
       backgroundSubscription.remove();
     };
   }, []);
+
+  const triggerNotificationHandler = async () => {
+    await Notifications.scheduleNotificationAsync({
+      content: {
+        title: "Primeira Notificação Local",
+        body: "Essa é a primeira notificação local que eu mando (:",
+        color: "red",
+      },
+      trigger: {
+        seconds: 5,
+      },
+    });
+  };
   return (
     <SafeAreaView style={styles.screenContainer}>
       <Text>LocalNotificationsScreen</Text>
