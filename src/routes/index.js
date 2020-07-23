@@ -5,7 +5,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import FormikScreen from "../screens/FormikScreen";
 import MyInputScreen from "../screens/MyInputScreen";
 import UnformScreen from "../screens/UnformScreen";
-import PushNotificationScreen from "../screens/PushNotificationScreen";
+import LocalNotificationsScreen from "../screens/LocalNotificationsScreen";
+import PushNotificationsScreen from "../screens/PushNotificationsScreen";
 
 const MainStack = createStackNavigator();
 const Router = () => {
@@ -14,7 +15,11 @@ const Router = () => {
       <MainStack.Navigator>
         <MainStack.Screen
           name="PushNotificationsScreen"
-          component={PushNotificationScreen}
+          component={PushNotificationsScreen}
+        />
+        <MainStack.Screen
+          name="LocalNotificationsScreen"
+          component={LocalNotificationsScreen}
         />
         <MainStack.Screen name="FormikScreen" component={FormikScreen} />
         <MainStack.Screen name="MyInputScreen" component={MyInputScreen} />
