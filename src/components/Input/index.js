@@ -9,7 +9,6 @@ const Input = () => {
         autoCorrect={false}
         style={styles.inputContainer}
       />
-      ;
     </>
   );
 };
